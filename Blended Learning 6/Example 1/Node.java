@@ -18,11 +18,10 @@ public class Node {
      *  the data type. :)
      */
     
-    public Employee data;
+    public Object data;
     public Node next;
     
-    public Node(Employee obj) {
+    public Node(Object obj) {
         data = obj;
     }
 }
-

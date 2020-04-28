@@ -10,7 +10,7 @@ public class employeeApp {
         LinkList list = new LinkList();
         
         // Ask user to input the data
-        for(int i=0; i<5; i++) {
+        for(int i=0; i<3; i++) {
 
             String eID= JOptionPane.showInputDialog("Enter employee id");
             int epmID = Integer.parseInt(eID);

@@ -112,32 +112,43 @@ public class LinkList {
     }
     
     public void displayMaxPerformance() {
-        Employee bestEmploy = (Employee) this.getFirst();
-        Employee data = (Employee) this.getNext();
+        System.out.println("Masukk method");
+        Node bestEmploy = first; 
+        Node val = current; 
+        boolean found = false;
         
-        while(this.getNext() != null) {
-  
-            if(data.getPerformance() > bestEmploy.getPerformance()){
+        while(val != null && found != true) {
+            if (first.data.getPerformance() > bestEmploy.data.getPerformance()) {
                 
-                bestEmploy = data;
+                bestEmploy = first;
+                found = true;
+                
+            } else if(val.data.getPerformance() > bestEmploy.data.getPerformance()){
+                System.out.println(val.data.getPerformance() + " > " +  bestEmploy.data.getPerformance());
+                bestEmploy = val;
+                val = current.next;
+            } else {
+                
+                bestEmploy = val;
+                last = current;
+                found = true;
             }
         }
         
-        System.out.println("The best employee is: " + bestEmploy.toString());
+        System.out.println("The best employee is: " + bestEmploy.data.toString());
     }
-    
-    /*
-     *  Refering to the Module's Method of Deleting Node at nth index
-     */
+
+      /*
+      * Refering to the Module's Method of Deleting Node at nth index
+      * If the ID is equals to the first ID in the node.
+      * First ID in the node = last ID 
+      * entered by user due to insertAtFront()
+      */
     public void deleteInfo(int ID) {
-        
+
          boolean found = false;
          Node current = first;
-         /*
-          * If the ID is equals to the first ID in the node.
-          * First ID in the node = last ID 
-          * entered by user due to insertAtFront()
-          */
+
          if(first.data.getID() == ID) {
              first = first.next;
          } else {
@@ -156,13 +167,12 @@ public class LinkList {
               */
              while(current.next != null && found == false) {
                  if(current.next.data.getID() == ID) {
-
+                     
                     if(current.next.next != null) {
                         current.next = current.next.next;
                     } else {
                         last = current;
                     }
-                    
                     found = true;
                  } else {
                      current = current.next;
@@ -170,7 +180,6 @@ public class LinkList {
              }
          }
     }
-   
 
     /*
     public void deleteInfo(int ID) {

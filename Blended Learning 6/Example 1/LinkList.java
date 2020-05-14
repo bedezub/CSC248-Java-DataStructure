@@ -15,7 +15,7 @@ public class LinkList {
         return(first == null);
     }
 
-    public void insertAtFront(final Object insertItem) {
+    public void insertAtFront(final String insertItem) {
         
         final Node newNode = new Node (insertItem);
 
@@ -28,7 +28,7 @@ public class LinkList {
         }
     }
 
-    public void insertAtBack(final Object insertItem) {
+    public void insertAtBack(final String insertItem) {
 
         final Node newNode = new Node (insertItem);
 
@@ -41,9 +41,9 @@ public class LinkList {
         }
     }
     
-    public Object removeFromFront() {
+    public String removeFromFront() {
 
-        Object removeItem = null;
+        String removeItem = null;
 
         if(isEmpty()) {
             return removeItem;
@@ -63,9 +63,9 @@ public class LinkList {
         return removeItem;
     }
 
-    public Object removeFromBack() {
+    public String removeFromBack() {
 
-        Object removeItem = null;
+        String removeItem = null;
 
         if(isEmpty()) {
             return removeItem;
@@ -91,7 +91,7 @@ public class LinkList {
         return removeItem;
     }
 
-    public Object getFirst() {
+    public String getFirst() {
 
         if(isEmpty()) {
             return null;

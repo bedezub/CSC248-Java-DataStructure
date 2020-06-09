@@ -2,4 +2,10 @@
 comment0.target=Node
 comment1.params=obj
 comment1.target=Node(java.lang.Object)
-numComments=2
+comment2.params=
+comment2.target=java.lang.Object\ getData()
+comment3.params=d
+comment3.target=void\ setData(int)
+comment4.params=
+comment4.target=Node\ getNext()
+numComments=5

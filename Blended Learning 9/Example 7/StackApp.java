@@ -54,6 +54,8 @@ public class StackApp {
                 
                 num2000++;
             }
+            
+            tempStack.push(E);
         }
         
         System.out.println("The number of employee that their age is above 40 = " + numAge);
@@ -67,13 +69,15 @@ public class StackApp {
             
             if(E.getSalary() > maxSalary) {
                 maxSalary = E.getSalary();
-            } else {
+            } 
+            
+            if (E.getSalary() < minSalary) {
                 minSalary = E.getSalary();
             }
             
             theStack.push(E);
-            System.out.println("The maximum salary =" + maxSalary);
-            System.out.println("The minimum salary = " + minSalary);
         }
+        System.out.println("The maximum salary =" + maxSalary);
+        System.out.println("The minimum salary = " + minSalary);
     }
 }

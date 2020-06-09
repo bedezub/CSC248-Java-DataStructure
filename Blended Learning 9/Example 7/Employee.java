@@ -37,6 +37,6 @@ public class Employee {
     
     public String toString() {
         
-        return ("\nID: " + employID + "\nName: " + empName);
+        return ("\nID: " + employID + "\nName: " + empName + "\nAge: " + eAge + "\nSalary: " + salary);
     }
 }

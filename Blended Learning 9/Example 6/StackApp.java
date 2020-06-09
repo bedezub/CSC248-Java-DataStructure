@@ -38,5 +38,6 @@ public class StackApp {
         JOptionPane.showMessageDialog(null, "The sum of all items in the stack is " + sum);
         JOptionPane.showMessageDialog(null, "The minimum is " + min);
         JOptionPane.showMessageDialog(null, "The maximum is " + max);
+        JOptionPane.showMessageDialog(null, "The average is " + average);
     }
 }

@@ -7,6 +7,21 @@ import javax.swing.*;
     
     public Node(Object obj) {
         data = obj;
+    }    
+    
+    public Object getData()
+    {
+        return data;
+    }
+
+    public void setData(int d)
+    {
+        data = d;
+    }
+
+    public Node getNext()
+    {
+        return next;
     }
 }
     
